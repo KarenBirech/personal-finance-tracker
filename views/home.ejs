@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyMint</title>
+    <link rel="stylesheet" href="/styles/home.css" />
+  </head>
+  <body>
+    <%- include("_nav.ejs") %>
+
+    <div class="intro">
+      <div class="intro-text">
+        <h1>
+          <% if(locals.user){ %>
+          <em>Welcome <%=user.fullname%></em>
+          <% } else { %>
+          <em>Welcome User </em>
+          <% } %> to <br />
+          Personal finance, <br />
+          reimagined
+        </h1>
+        <p>
+          Tired of feeling lost in a maze of numbers? Ditch the spreadsheets and
+          stress. <br />
+          Imagine personal finance that feels empowering, not overwhelming.
+          <br />We're talking a personalized dashboard that greets you like a
+          financial compass, <br />
+          highlighting your progress, upcoming bills, and even offering smart
+          tips tailored to your goals. <br />
+          <strong>This is personal finance, reimagined. </strong>
+        </p>
+        <a href="/signup">Get Started Here</a>
+      </div>
+
+      <div class="business-image">
+        <img src="/images/business1.jpg" alt="business-image" />
+      </div>
+    </div>
+    <section class="features">
+      <div class="feature" id="feature-1">
+        <div class="feature-head">
+          <img src="/images/magnifying glass.png" alt="magnifying glass" />
+          <h3>Tracking of Transactions</h3>
+        </div>
+        <p class="feature-text">
+          <strong>Income and Expense Tracking:</strong> Record your income from
+          various sources and categorize your spending to understand where your
+          money goes.
+        </p>
+      </div>
+      <div class="feature" id="feature-2">
+        <div class="feature-head">
+          <img src="/images/piggybank.png" alt="piggybank" />
+          <h3>Budgeting and Goals</h3>
+        </div>
+        <p class="feature-text">
+          <strong>Budgeting Tools:</strong> Set spending limits for different
+          categories and track how you're doing against your budget goals.
+          <br />
+          <strong>Financial Goal Setting:</strong> Create specific savings
+          goals, like a dream vacation or down payment on a house, and track
+          your progress.
+        </p>
+      </div>
+
+      <div class="feature" id="feature-3">
+        <div class="feature-head">
+          <img src="/images/insights.png" alt="insights" />
+          <h3>Insights and Analytics</h3>
+        </div>
+        <p class="feature-text">
+          <strong>Data Visualization:</strong> See your financial data presented
+          in clear charts and graphs to identify spending trends and areas for
+          improvement.
+          <br />
+          <strong>Financial Insights:</strong> Get personalized reports and
+          recommendations based on your spending habits and financial goals.
+        </p>
+      </div>
+    </section>
+
+    <section class="faqs">
+      <div class="frequently-asked">
+        <h2><em>Frequently asked questions</em></h2>
+        <p>
+          <strong>What is MyMint and it's purpose?</strong> <br />
+          <span
+            >MyMint is a personal finance app that assists you in managing your
+            money to achieve your financial goals. It shows the big picture of
+            your financial life, encompassing everything from earning money to
+            spending it wisely, saving for the future, and protecting yourself
+            from financial risks.</span
+          >
+          <br />
+          <strong>Is MyMint free to use?</strong> <br />
+          <span>Yes, MyMint is free to use.</span> <br />
+          <strong>Is my financial data secure?</strong> <br />
+          <span
+            >Absolutely, MyMint stores your personal finance data securely on
+            our website through use of data encryption.</span
+          >
+          <br />
+          <strong>How do I categorize my income and expenses?</strong> <br />
+          <span
+            >You can categorize your income and expenses by selecting a category
+            that best suits the type of income for example; salary, investment
+            income, self-employment income, and expenses for example; groceries,
+            rent, entertainment, debt payments.</span
+          >
+        </p>
+      </div>
+    </section>
+
+    <script>
+      document.cookie = "name=oeschger; SameSite=None; Secure";
+      document.cookie = "favorite_food=tripe; SameSite=None; Secure";
+    </script>
+
+    <%- include("footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+footer {
+  background-color: orange;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links-contacts a {
+  display: block;
+  line-height: 2rem;
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.links-contacts img {
+  width: 80px;
+}
+footer .links {
+  margin: 30px 0;
+}
+
+footer .links a {
+  display: block;
+  flex: 1;
+  margin: 12px 0;
+  color: white;
+  text-decoration: none;
+}
+
+footer .socials {
+  width: fit-content;
+  margin: 20px 0;
+  text-decoration: none;
+  color: white;
+}
+
+.socials a {
+  
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+  font-size: 20px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 15px;
+  color: gray;
+}
+
+/* .footer-flex { */
+/* display: flex; */
+/* justify-content: space-between; */
+/* } */
+
+/* .footer-flex > div { */
+/* flex: 1; */
+/* } */

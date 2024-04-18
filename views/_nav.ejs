@@ -1,0 +1,31 @@
+<header>
+  <link rel="stylesheet" href="/styles/nav.css" />
+
+  <img src="/images/logo white.png" alt="logo" />
+
+  <nav id="main-nav">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/support">Support</a>
+
+    <% if(locals.user){%>
+    <a href="/profile"> <%= locals.user.fullname.split(" ")[0] %> </a>
+    <a href="/logout">Logout</a>
+    <% } else{%>
+    <a href="/login">Log In</a>
+    <a href="/signup">Sign Up</a>
+    <%}%>
+  </nav>
+  <button id="menu-btn">
+    <ion-icon name="menu-outline"></ion-icon>
+  </button>
+</header>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mainNav = document.getElementById("main-nav");
+  if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+      mainNav.classList.toggle("open");
+    });
+  }
+</script>

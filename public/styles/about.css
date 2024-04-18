@@ -1,0 +1,111 @@
+* {
+  margin: 0px;
+  padding: 0;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    44.8deg,
+    rgba(255, 136, 102, 0.67) -53.1%,
+    rgba(255, 221, 136, 0.28) 49%
+  );
+}
+
+.about-intro h1 {
+  text-align: center;
+  color: gray;
+  font-size: 30px;
+  padding: 10px;
+}
+
+hr {
+  border: 1px solid gray;
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.about-intro h2 {
+  text-align: center;
+  color: orange;
+  font-size: 20px;
+}
+
+.about-intro p {
+  text-align: center;
+  color: gray;
+  font-size: 15px;
+  line-height: 1.5rem;
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.makes-us-different h2 {
+  margin: 20px;
+  color: orange;
+  font-size: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.makes-us-different ul {
+  list-style-type: style type square;
+  margin: 20px;
+  line-height: 1.5rem;
+  font-size: 15px;
+  color: gray;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.makes-us-different li {
+  margin: 20px;
+}
+
+.makes-us-different p {
+  color: orange;
+  margin: 20px;
+  line-height: 1.5rem;
+  font-size: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.makes-us-different span {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.founder h2 {
+  text-align: center;
+  color: gray;
+  font-size: 20px;
+  line-height: 2rem;
+}
+
+.founder img {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.founder h3 {
+  text-align: center;
+  color: orange;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.founder p {
+  text-align: center;
+  color: gray;
+  font-size: 15px;
+  line-height: 1.5rem;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}

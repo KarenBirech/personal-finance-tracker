@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    44.8deg,
+    rgba(255, 136, 102, 0.67) -53.1%,
+    rgba(255, 221, 136, 0.28) 49%
+  );
+}
+
+.intro h1 {
+  text-align: center;
+  color: gray;
+  font-size: 30px;
+  padding: 10px;
+  margin-top: -20px;
+}
+
+.intro p {
+  text-align: center;
+  color: orange;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 1px solid gray;
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+h2 {
+  margin: 20px;
+  color: orange;
+  font-size: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+div ul {
+  list-style-type: style type square;
+  margin: 20px;
+  line-height: 1.5rem;
+  font-size: 15px;
+  color: gray;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.troubleshooting a {
+  color: orange;
+}
+
+.need-help p {
+  color: gray;
+  font-size: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.need-help span {
+  color: orange;
+  text-decoration: underline;
+}
+
+.closing {
+  color: orange;
+  font-size: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}

@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(
+    44.8deg,
+    rgba(255, 136, 102, 0.67) -53.1%,
+    rgba(255, 221, 136, 0.28) 49%
+  );
+
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: orange;
+}
+
+hr {
+  border: 1px solid gray;
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+h2 {
+  color: gray;
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+form {
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.income-table,
+.expense-table,
+.investment-table {
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+input {
+  margin-bottom: 10px;
+  padding: 8px 30px;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  border-style: none;
+}
+
+.container1 button[type="submit"] {
+  background-color: gray;
+  color: orange;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.container1 button[type="submit"]:hover {
+  background-color: orange;
+  color: gray;
+}
+
+.container2 button[type="submit"] {
+  background-color: gray;
+  color: orange;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.container2 button[type="submit"]:hover {
+  background-color: orange;
+  color: gray;
+}
+
+.container3 button[type="submit"] {
+  background-color: gray;
+  color: orange;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.container3 button[type="submit"]:hover {
+  background-color: orange;
+  color: gray;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  border: 1px solid gray;
+  color: orange;
+  padding: 10px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+th {
+  background-color: white;
+}
+
+.total-amount {
+  color: gray;
+}
+
+.total-amount span {
+  color: orange;
+}

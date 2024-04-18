@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="/styles/about.css" />
+  </head>
+  <body>
+    <% if(locals.user){ %>
+    <h1>Welcome <%=user.fullname%></h1>
+    <% } else { %> <% } %> <%- include("_nav.ejs") %>
+
+    <div class="about-intro">
+      <h1>
+        <strong>
+          About MyMint: <br />
+          <em> Your Path to Financial Freedom </em></strong
+        >
+      </h1>
+
+      <hr />
+
+      <h2>We believe everyone deserves financial clarity and control.</h2>
+      <p>
+        MyMint is a personal finance tracker designed to empower you to take
+        charge of your money with ease. We simplify the process of tracking
+        income and expenses, creating budgets, and setting goals, so you can
+        achieve financial peace of mind.
+      </p>
+    </div>
+
+    <hr />
+
+    <div class="makes-us-different">
+      <h2><em>Here's what makes us different:</em></h2>
+      <ul>
+        <li>
+          <strong>Effortless Tracking:</strong> Seamlessly connect your bank
+          accounts (securely, of course!) or manually add transactions.
+        </li>
+        <li>
+          <strong>Smart Categorization:</strong> Our intuitive app automatically
+          categorizes transactions, saving you time and effort.
+        </li>
+        <li>
+          <strong>Powerful Budgeting:</strong> Set realistic budgets for
+          different categories and track your progress towards your financial
+          goals.
+        </li>
+        <li>
+          <strong>Actionable Insights:</strong> Gain valuable insights into your
+          spending habits with clear reports and visualizations.
+        </li>
+        <li>
+          <strong>Goal Setting Made Easy:</strong> Set specific financial goals
+          and track your progress every step of the way.
+        </li>
+        <li>
+          <strong>Security You Can Trust:</strong> We prioritize your data
+          security with industry-standard encryption and secure login protocols.
+        </li>
+      </ul>
+      <p>
+        <em>
+          We're passionate about helping people achieve financial success.
+          Whether you're just starting your financial journey or looking to take
+          control of your existing budget, MyMint is here to guide you.
+        </em>
+        <br />
+        <span>
+          <strong>Join us on your path to financial freedom! </strong></span
+        >
+      </p>
+    </div>
+    <hr />
+    <div class="founder">
+      <h2>Founder</h2>
+      <img src="/images/karen profile pic.jpg" alt="profile-pic" />
+      <h3>Karen Birech</h3>
+      <p>
+        MyMint was founded by Karen Birech, a passionate advocate for financial
+        literacy and empowerment. She saw a need for a user-friendly and
+        accessible tool to help people manage their money effectively. Driven by
+        this vision, she created MyMint to make financial tracking and goal
+        setting simple and achievable for everyone.
+      </p>
+    </div>
+    <%- include("footer.ejs") %>
+  </body>
+</html>

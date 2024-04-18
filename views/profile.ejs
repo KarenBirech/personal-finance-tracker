@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles/profile.css" />
+  </head>
+  <body>
+    <%- include("_nav.ejs") %>
+
+    <main class="main-1">
+      <section class="container-1">
+        <div class="side-bar">
+          <ul>
+            <li>
+              <strong><a href="/profile">Profile</a></strong>
+            </li>
+            <li><a href="/income">Income</a></li>
+            <li><a href="/investment">Investment</a></li>
+            <li><a href="/expenses">Expenses</a></li>
+            <li><a href="/transaction">Transactions</a></li>
+
+            <li><a href="/reports">Reports</a></li>
+          </ul>
+          <hr />
+          <ul>
+            <li><a href="/support">Help & Support</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="container-2">
+        <div class="income-tab">
+          <img src="/images/dollar-symbol.png" alt="dollar-sign" />
+          <h4>Total Income</h4>
+          <p>Ksh.</p>
+        </div>
+
+        <div class="expense-tab">
+          <img src="/images/dollar.png" alt="coins" />
+          <h4>Total Expenses</h4>
+          <p>Ksh.</p>
+        </div>
+
+        <div class="savings-tab">
+          <img src="/images/savings.png" alt="savings" />
+          <h4>Savings</h4>
+          <p>Ksh.</p>
+        </div>
+        <div class="investment-tab">
+          <img src="/images/investment.png" alt="" />
+          <h4>Investments</h4>
+          <p>Ksh.</p>
+        </div>
+      </section>
+    </main>
+    <main class="main-2">
+      <section class="container-3">
+        <div>
+          <h3>Top 5 Expense Source</h3>
+        </div>
+        <div>
+          <h3>Recent Expenses</h3>
+        </div>
+      </section>
+
+      <section class="container-4">
+        <div>
+          <h3>Report Overview</h3>
+        </div>
+        <div></div>
+      </section>
+    </main>
+
+    <%- include("footer.ejs") %>
+  </body>
+</html>

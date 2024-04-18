@@ -1,0 +1,165 @@
+.first-color {
+  background: #5c4d4d;
+}
+
+.second-color {
+  background: #915b4a;
+}
+
+.third-color {
+  background: #a96851;
+}
+
+.fourth-color {
+  background: #f2f1e7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    44.8deg,
+    rgba(255, 136, 102, 0.67) -53.1%,
+    rgba(255, 221, 136, 0.28) 49%
+  );
+}
+
+.intro {
+  text-align: start;
+  display: flex;
+  line-height: 1.5;
+  color: gray;
+}
+
+h1 {
+  font-size: 30px;
+  color: orange;
+  flex: 1;
+  margin: 10px 20px;
+}
+
+p {
+  font-size: 15px;
+  padding: 10px 20px;
+  line-height: 2rem;
+}
+
+.business-image img {
+  width: 95%;
+  flex: 1;
+  border: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.intro a {
+  text-decoration: underline;
+  color: #a96851;
+  font-size: 16px;
+  padding: 10px 20px;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.intro a:hover {
+  color: #f8b400;
+  transition: all 0.3s ease-in-out;
+}
+
+.benefits h2 {
+  color: #f8b400;
+  font-size: 25px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.feature {
+  background-color: #f2f1e7;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 30%;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.feature-head {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.feature-head img {
+  border-radius: 2px;
+}
+
+.feature p {
+  line-height: 30px;
+}
+
+.feature-head h3 {
+  font-size: 18px;
+  color: orange;
+}
+
+.feature-text {
+  line-height: 30px;
+  color: gray;
+}
+
+#feature-2 {
+  margin-bottom: 15px;
+}
+#feature-3 {
+  margin-bottom: 15px;
+}
+#feature-1 {
+  margin-bottom: 15px;
+}
+
+.faqs {
+  /* box-sizing: border-box; */
+  /* padding: 2rem; */
+  /* margin: 20px; */
+  /* border: 2px solid #f8b400; */
+  /* border-radius: 10px; */
+  background-color: gray;
+}
+
+.feature-head img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.frequently-asked h2 {
+  color: #f2f1e7;
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+.frequently-asked strong {
+  /* line-height: 2rem; */
+  color: #f8b400;
+  font-size: 18px;
+}
+
+.frequently-asked span {
+  /* line-height: 1.5rem; */
+  color: #f2f1e7;
+  font-size: 15px;
+}
