@@ -15,7 +15,7 @@
         <h1>Income</h1>
         <hr />
         <div class="container1">
-          <form id="income-form">
+          <form id="income-form" action="/add-income" method="post">
             <input
               type="date"
               id="date"
@@ -49,7 +49,15 @@
                   <th>Action</th>
                 </tr>
               </thead>
-              <tbody id="income-list"></tbody>
+              <tbody id="income-list">
+                <% incomes.forEach(function(income) { %>
+                <tr>
+                  <td><%= income.date %></td>
+                  <td><%= income.incomeName %></td>
+                  <td>Ksh. <%= income.incomeAmount %></td>
+                </tr>
+                <% }) %>
+              </tbody>
             </table>
             <div class="total-amount">
               <strong>Total:</strong>
@@ -62,5 +70,7 @@
     </main>
 
     <%- include("footer.ejs") %>
+
+    <script src="/javascript/income.js"></script>
   </body>
 </html>

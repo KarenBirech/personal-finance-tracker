@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const mysql = require("mysql");
+const bodyParser = require("body-parser");
 const myConnection = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -18,23 +19,11 @@ myConnection.connect((err) => {
   }
 });
 
-myConnection.query(
-  "CREATE TABLE if not EXISTS users(user_id INT NOT NULL AUTO_INCREMENT, email VARCHAR(100), fullname VARCHAR(100), password VARCHAR(255), phone VARCHAR(20), PRIMARY KEY(user_id))",
-  (sqlerror, QRES) => {
-    if (sqlerror) {
-      console.log(sqlerror.message);
-    } else {
-      console.log("table created");
-    }
-  }
-);
-
 const app = express();
 
 app.use((req, res, next) => {
   let adminRoutes = ["/dash", "/res"];
   console.log(req.path);
-  //console.log("This is a middleware function!!!!!runs on every request");
   next();
 });
 
@@ -49,6 +38,7 @@ app.use(
   })
 );
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use((req, res, next) => {
   const protectedRoutes = [
     "/protectedRouteOne",
@@ -56,7 +46,7 @@ app.use((req, res, next) => {
     "/profile",
   ];
   const adminRoutes = ["/profile"];
-  const adminEmail = "admin@pft.co.ke";
+  const adminEmail = "admin@mymint.co.ke";
   if (req.session && req.session.user) {
     res.locals.user = req.session.user;
     if (adminRoutes.includes(req.path) && req.session.user.role === "admin") {
@@ -75,10 +65,7 @@ app.get("/", (req, res) => {
   console.log(req.cookies);
   res.render("home.ejs");
 });
-app.get("/sample", (req, res) => {
-  console.log(req.baseUrl);
-  res.render("sample.ejs");
-});
+
 app.get("/login", (req, res) => {
   if (req.query.signupSuccess) {
     res.render("login.ejs", {
@@ -123,6 +110,28 @@ app.get("/signup", (req, res) => {
 });
 app.get("/income", (req, res) => {
   res.render("income.ejs");
+});
+
+app.post("/add-income", (req, res) => {
+  const { date, incomeName, incomeAmount } = req.body;
+
+  console.log("req.body:", req.body);
+
+  const insertIncomeQuery = `INSERT INTO income (date, income_name, income_amount, loggedin_user) VALUES ("${req.body.date}", "${req.body.incomeName}", "${req.body.incomeAmount}", "${req.body.email}")`;
+
+  myConnection.query(
+    insertIncomeQuery,
+    [date, incomeName, incomeAmount],
+    (incomeErr, result) => {
+      if (incomeErr) {
+        console.log("incomeErr:", incomeErr);
+        res.status(500).send("Server Error: Contact Admin if this persists.");
+      } else {
+        console.log("Income added to database:", result);
+        res.redirect("/profile");
+      }
+    }
+  );
 });
 
 app.get("/expenses", (req, res) => {
